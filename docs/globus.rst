@@ -5,7 +5,7 @@ Globus
 Install:
 ********
 
-Reference : `globus for linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`
+Reference : `globus for linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`_
 
 Install the globus client::
 
@@ -14,11 +14,11 @@ Install the globus client::
     cd globusconnectpersonal-2.3.5/ 
 
 Contrary to what the reference says, we could not create the endpoint in command line.
-Insteead log into the globus website, go to "Endpoints", then "add Globus Connect Personal endpoint",
-enter <server_name> in 'Display name' box and press 'Generate Setup Key", save the key to clipboard then
-go back to terminal and run : 
+Instead log into the globus website. Go to "Endpoints", then "add Globus Connect Personal endpoint",
+enter <server_name> in the 'Display name' box and press 'Generate Setup Key". Save the key to clipboard then
+go back to terminal and run:: 
 
-./globusconnectpersonal -setup <setup_key_from_clipboard>
+    ./globusconnectpersonal -setup <setup_key_from_clipboard>
 
 And you're all set!
 
