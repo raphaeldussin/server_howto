@@ -13,6 +13,7 @@ Contents:
    :glob:
 
    globus.rst
+   conda_env.rst
 
 
 
