@@ -1,31 +1,38 @@
 ======
-GLOBUS
+Globus
 ======
 
-start with instructions from : https://docs.globus.org/how-to/globus-connect-personal-linux/
+Install:
+********
 
-wget https://downloads.globus.org/globus-connect-personal/linux/stable/globusconnectpersonal-latest.tgz
-tar xzf globusconnectpersonal-latest.tgz
-cd globusconnectpersonal-2.3.5/ # or ulterior (time dependent)
+Reference : `globus for linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`
 
-# this section of the doc doesn't work
-# ./globus endpoint create --personal artemis_ldeo
+Install the globus client::
 
-# insteead log into the globus website, go to "Endpoints", then "add Globus Connect Personal endpoint",
-# enter artmis_ldeo in 'Display name' box and press 'Generate Setup Key", save the key to clipboard then
-# go back to terminal and run : 
+    wget https://downloads.globus.org/globus-connect-personal/linux/stable/globusconnectpersonal-latest.tgz
+    tar xzf globusconnectpersonal-latest.tgz
+    cd globusconnectpersonal-2.3.5/ 
+
+Contrary to what the reference says, we could not create the endpoint in command line.
+Insteead log into the globus website, go to "Endpoints", then "add Globus Connect Personal endpoint",
+enter <server_name> in 'Display name' box and press 'Generate Setup Key", save the key to clipboard then
+go back to terminal and run : 
 
 ./globusconnectpersonal -setup <setup_key_from_clipboard>
 
-# and that's it!
+And you're all set!
 
-# Useful globus commands :
+Usage:
+******
 
-./globusconnectpersonal -start 
-./globusconnectpersonal -help
-./globusconnectpersonal -stop
-./globusconnectpersonal -status
+Some useful globus commands::
 
-# To allow globus to access your workspace :
+    ./globusconnectpersonal -help
+    ./globusconnectpersonal -start 
+    ./globusconnectpersonal -stop
+    ./globusconnectpersonal -status
 
-./globusconnectpersonal -restrict-paths /local/data/artemis/workspace/$(whoami) -start
+By default, globus access only your home directory.
+To allow globus to access your workspace::
+
+./globusconnectpersonal -restrict-paths /local/data/<server_name>/workspace/$(whoami) -start
