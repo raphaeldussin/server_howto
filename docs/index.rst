@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
    :glob:
 
+   data_organization.rst
    globus.rst
    conda_env.rst
 
