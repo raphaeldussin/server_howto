@@ -26,6 +26,7 @@ into your environment. (NB: you can't install new packages in the default enviro
 To use your conda environment in the server's jupyterhub,
 install the ipython kernel for your conda environment::
 
+    conda install ipykernel
     python -m ipykernel install --user --name dev --display-name "Python3 (dev,raf)"
 
 The argument for ``--name`` must correspond to the environment name (e.g. dev).
