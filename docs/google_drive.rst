@@ -5,8 +5,6 @@ Mount Google Drive from CU
 Install:
 ********
 
-Reference : `globus for linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`_
-
 Install the google drive app from opam::
 
    opam init
