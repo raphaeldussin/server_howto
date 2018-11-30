@@ -14,6 +14,7 @@ Contents:
 
    data_organization.rst
    globus.rst
+   google_drive.rst
    conda_env.rst
    group_policies.rst
 
