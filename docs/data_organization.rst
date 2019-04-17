@@ -30,3 +30,29 @@ Data Organization
    Quick access with::
 
        cd $simulations
+
+Discover data with intake:
+**************************
+
+You can explore the datasets available using intake catalogs available here::
+
+   /local/data/<server>/catalogs
+
+For example, exploring ASTE data inside python can be done with:
+
+.. code-block:: python
+
+    import intake
+    catalog = intake.Catalog('/local/data/artemis/catalogs/ASTE_catalog.yml')
+    list(catalog)
+
+Once you have found the dataset you're interested in, you can load as follows:
+
+.. code-block:: python
+
+   ds_biomes = catalog.Biomes_FayMcKinley.to_dask()
+
+   import matplotlib.pylab as plt
+   ds_biomes.MeanBiomes.sel(face=4).plot()
+   plt.show()
+
