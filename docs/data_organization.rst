@@ -34,7 +34,12 @@ Data Organization
 Discover data with intake:
 **************************
 
-You can explore the datasets available using intake catalogs available here::
+Install intake and intake_xarray installed in your conda environment::
+
+   conda install -c intake intake
+   conda install -c conda-forge intake-xarray
+
+you can explore the datasets available using intake catalogs available here::
 
    /local/data/<server>/catalogs
 
@@ -52,6 +57,7 @@ Once you have found the dataset you're interested in, you can load as follows:
 
    ds_biomes = catalog.Biomes_FayMcKinley.to_dask()
 
+   # test plot
    import matplotlib.pylab as plt
    ds_biomes.MeanBiomes.sel(face=4).plot()
    plt.show()
