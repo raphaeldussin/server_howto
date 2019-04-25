@@ -17,7 +17,7 @@ Contents:
    google_drive.rst
    conda_env.rst
    group_policies.rst
-
+   Tuto_using_intake
 
 
 Indices and tables
