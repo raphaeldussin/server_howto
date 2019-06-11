@@ -39,8 +39,8 @@ the login node (e.g. habanero)::
 
   ssh -L 8010:<nodeip>:8888 <name_of_login_node>
   
- In your web browser, type::
+In your web browser, type::
  
   localhost:8010
   
- And you should be connected to your notebook.
+And you should be connected to your notebook.
