@@ -16,6 +16,7 @@ Contents:
    globus.rst
    google_drive.rst
    conda_env.rst
+   notebook_cuit.rst
    group_policies.rst
    Tuto_using_intake
 
